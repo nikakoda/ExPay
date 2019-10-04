@@ -19,6 +19,7 @@ class PinView: UIView, PinViewConfigurable {
     
     private lazy var indicator = PinIndicator()
     private lazy var pinLabel  = UILabel()
+    // private
     private lazy var isFilled: Bool = false
     
     required init?(coder aDecoder: NSCoder) {
@@ -43,6 +44,7 @@ class PinView: UIView, PinViewConfigurable {
        indicator.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
    }
     
+    // internal
     internal func isEmpty() -> Bool {
         return !isFilled
     }

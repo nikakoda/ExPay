@@ -17,14 +17,19 @@ public class SimplePasscodeView: UIView {
     @IBOutlet private weak var passcodeStackView: UIStackView!
     
     private var contentView: UIView?
-    private var passcodeText = String()
+    //private
+    public var passcodeText = String()
+    
+    
+    
     
     public weak var delegate: SimplePasscodeDelegate?
     public var keyboardType: UIKeyboardType = .numberPad
+    public var keyboardAppearance: UIKeyboardAppearance = .dark
 
-   required public init?(coder aDecoder: NSCoder) {
-       super.init(coder: aDecoder)
-   }
+  // required public init?(coder aDecoder: NSCoder) {
+  //     super.init(coder: aDecoder)
+  // }
   
    public override func layoutSubviews() {
        super.layoutSubviews()

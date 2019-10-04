@@ -13,8 +13,7 @@ class MyAccountVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        ///
-        // СПРЯТАТЬ КНОПКУ НАЗАД
+        // спрятать кнопку "назад"
         self.navigationItem.setHidesBackButton(true, animated:true)
         
         
@@ -28,13 +27,24 @@ class MyAccountVC: UIViewController {
               gradientLayer.startPoint = CGPoint(x: 1.0, y: 0.0)
               gradientLayer.endPoint = CGPoint(x: 0.0, y: 1.0)
               self.view.layer.insertSublayer(gradientLayer, at: 0)
-              
+        
+        
+        view.endEditing(false)
     }
     
+    
+    // по факту активными сделать только врехнюю часть
+    // просто вставить картинки вместо точек
     
     
     // для page controller
     // https://www.youtube.com/watch?v=AgUubgI-ZjI
+    // вставить картинки вместо точек
+    // http://qaru.site/questions/11550489/add-border-for-dots-in-uipagecontrol
+    //https://stackoverflow.com/questions/12190147/customize-dot-with-image-of-uipagecontrol-at-index-0-of-uipagecontrol
+    // https://stackoverflow.com/questions/51675303/uipagecontrol-and-uiscrollview-not-scrolling
+    
+    // поместить пэйдж контрол в юайимаге вью и пролистывать скроллить только это
     
     
     

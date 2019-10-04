@@ -34,6 +34,7 @@ class ViewController: UIViewController, MaskedTextFieldDelegateListener {
          phoneNumberPlace.keyboardType = .phonePad
         phoneNumberPlace.keyboardAppearance = .dark
         
+        
         textField(phoneNumberPlace, didFillMandatoryCharacters: true, didExtractValue: phoneNumberPlace.text!)
         
         
@@ -91,7 +92,7 @@ class ViewController: UIViewController, MaskedTextFieldDelegateListener {
 
             performSegue(withIdentifier: "codeSegue", sender: nil)
         } else {
-            let alert = UIAlertController(title: "Wrong format", message: "Please enter your phone number!", preferredStyle: .alert)
+            let alert = UIAlertController(title: "Wrong format", message: "Please enter your phone number", preferredStyle: .alert)
             let okAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
             alert.addAction(okAction)
             present(alert, animated: true, completion: nil)
