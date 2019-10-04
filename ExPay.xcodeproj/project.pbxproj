@@ -8,13 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		66C7D3D8C64B71330269B724 /* Pods_ExPay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 939FB4D8909E2C863B3A8422 /* Pods_ExPay.framework */; };
+		8407550C23478324000E1222 /* SimplePasscodeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8407550723478324000E1222 /* SimplePasscodeView.xib */; };
+		8407550D23478324000E1222 /* PinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8407550823478324000E1222 /* PinView.swift */; };
+		8407550E23478324000E1222 /* PasscodeConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8407550923478324000E1222 /* PasscodeConfiguration.swift */; };
+		8407550F23478324000E1222 /* PinIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8407550A23478324000E1222 /* PinIndicator.swift */; };
+		8407551023478324000E1222 /* SimplePasscodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8407550B23478324000E1222 /* SimplePasscodeView.swift */; };
 		840768F5234487EF00350440 /* SecurityCodeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840768F4234487EF00350440 /* SecurityCodeVC.swift */; };
 		840768F72344881600350440 /* MyAccountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840768F62344881600350440 /* MyAccountVC.swift */; };
-		843557D32347409E00DF711A /* SimplePasscodeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 843557CE2347409E00DF711A /* SimplePasscodeView.xib */; };
-		843557D42347409E00DF711A /* PinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843557CF2347409E00DF711A /* PinView.swift */; };
-		843557D52347409E00DF711A /* PasscodeConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843557D02347409E00DF711A /* PasscodeConfiguration.swift */; };
-		843557D62347409E00DF711A /* PinIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843557D12347409E00DF711A /* PinIndicator.swift */; };
-		843557D72347409E00DF711A /* SimplePasscodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843557D22347409E00DF711A /* SimplePasscodeView.swift */; };
 		84B13B0D23431FE900EB83EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B13B0C23431FE900EB83EE /* AppDelegate.swift */; };
 		84B13B0F23431FE900EB83EE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B13B0E23431FE900EB83EE /* SceneDelegate.swift */; };
 		84B13B1123431FE900EB83EE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B13B1023431FE900EB83EE /* ViewController.swift */; };
@@ -25,13 +25,13 @@
 
 /* Begin PBXFileReference section */
 		54C2E66D44E3C9D31F907C3D /* Pods-ExPay.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExPay.debug.xcconfig"; path = "Target Support Files/Pods-ExPay/Pods-ExPay.debug.xcconfig"; sourceTree = "<group>"; };
+		8407550723478324000E1222 /* SimplePasscodeView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SimplePasscodeView.xib; sourceTree = "<group>"; };
+		8407550823478324000E1222 /* PinView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinView.swift; sourceTree = "<group>"; };
+		8407550923478324000E1222 /* PasscodeConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasscodeConfiguration.swift; sourceTree = "<group>"; };
+		8407550A23478324000E1222 /* PinIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinIndicator.swift; sourceTree = "<group>"; };
+		8407550B23478324000E1222 /* SimplePasscodeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimplePasscodeView.swift; sourceTree = "<group>"; };
 		840768F4234487EF00350440 /* SecurityCodeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecurityCodeVC.swift; sourceTree = "<group>"; };
 		840768F62344881600350440 /* MyAccountVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAccountVC.swift; sourceTree = "<group>"; };
-		843557CE2347409E00DF711A /* SimplePasscodeView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SimplePasscodeView.xib; sourceTree = "<group>"; };
-		843557CF2347409E00DF711A /* PinView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinView.swift; sourceTree = "<group>"; };
-		843557D02347409E00DF711A /* PasscodeConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasscodeConfiguration.swift; sourceTree = "<group>"; };
-		843557D12347409E00DF711A /* PinIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinIndicator.swift; sourceTree = "<group>"; };
-		843557D22347409E00DF711A /* SimplePasscodeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimplePasscodeView.swift; sourceTree = "<group>"; };
 		84B13B0923431FE900EB83EE /* ExPay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExPay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84B13B0C23431FE900EB83EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84B13B0E23431FE900EB83EE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -56,17 +56,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		843557CD2347409E00DF711A /* PasscodeView */ = {
+		8407550623478324000E1222 /* PasscodeView */ = {
 			isa = PBXGroup;
 			children = (
-				843557CE2347409E00DF711A /* SimplePasscodeView.xib */,
-				843557CF2347409E00DF711A /* PinView.swift */,
-				843557D02347409E00DF711A /* PasscodeConfiguration.swift */,
-				843557D12347409E00DF711A /* PinIndicator.swift */,
-				843557D22347409E00DF711A /* SimplePasscodeView.swift */,
+				8407550723478324000E1222 /* SimplePasscodeView.xib */,
+				8407550823478324000E1222 /* PinView.swift */,
+				8407550923478324000E1222 /* PasscodeConfiguration.swift */,
+				8407550A23478324000E1222 /* PinIndicator.swift */,
+				8407550B23478324000E1222 /* SimplePasscodeView.swift */,
 			);
-			name = PasscodeView;
-			path = "../../../../Downloads/PasscodeLock-master/SimplePasscodeView/PasscodeView";
+			path = PasscodeView;
 			sourceTree = "<group>";
 		};
 		84B13B0023431FE900EB83EE = {
@@ -96,10 +95,10 @@
 				840768F4234487EF00350440 /* SecurityCodeVC.swift */,
 				840768F62344881600350440 /* MyAccountVC.swift */,
 				84B13B1223431FE900EB83EE /* Main.storyboard */,
+				8407550623478324000E1222 /* PasscodeView */,
 				84B13B1523431FE900EB83EE /* Assets.xcassets */,
 				84B13B1723431FE900EB83EE /* LaunchScreen.storyboard */,
 				84B13B1A23431FE900EB83EE /* Info.plist */,
-				843557CD2347409E00DF711A /* PasscodeView */,
 			);
 			path = ExPay;
 			sourceTree = "<group>";
@@ -183,7 +182,7 @@
 			files = (
 				84B13B1923431FE900EB83EE /* LaunchScreen.storyboard in Resources */,
 				84B13B1623431FE900EB83EE /* Assets.xcassets in Resources */,
-				843557D32347409E00DF711A /* SimplePasscodeView.xib in Resources */,
+				8407550C23478324000E1222 /* SimplePasscodeView.xib in Resources */,
 				84B13B1423431FE900EB83EE /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -237,12 +236,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				843557D72347409E00DF711A /* SimplePasscodeView.swift in Sources */,
+				8407551023478324000E1222 /* SimplePasscodeView.swift in Sources */,
 				84B13B1123431FE900EB83EE /* ViewController.swift in Sources */,
-				843557D62347409E00DF711A /* PinIndicator.swift in Sources */,
+				8407550F23478324000E1222 /* PinIndicator.swift in Sources */,
 				84B13B0D23431FE900EB83EE /* AppDelegate.swift in Sources */,
-				843557D52347409E00DF711A /* PasscodeConfiguration.swift in Sources */,
-				843557D42347409E00DF711A /* PinView.swift in Sources */,
+				8407550E23478324000E1222 /* PasscodeConfiguration.swift in Sources */,
+				8407550D23478324000E1222 /* PinView.swift in Sources */,
 				84B13B0F23431FE900EB83EE /* SceneDelegate.swift in Sources */,
 				840768F5234487EF00350440 /* SecurityCodeVC.swift in Sources */,
 				840768F72344881600350440 /* MyAccountVC.swift in Sources */,
