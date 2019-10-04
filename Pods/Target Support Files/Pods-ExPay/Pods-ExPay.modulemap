@@ -1,0 +1,6 @@
+framework module Pods_ExPay {
+  umbrella header "Pods-ExPay-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -3,10 +3,18 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		66C7D3D8C64B71330269B724 /* Pods_ExPay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 939FB4D8909E2C863B3A8422 /* Pods_ExPay.framework */; };
+		840768F5234487EF00350440 /* SecurityCodeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840768F4234487EF00350440 /* SecurityCodeVC.swift */; };
+		840768F72344881600350440 /* MyAccountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840768F62344881600350440 /* MyAccountVC.swift */; };
+		843557D32347409E00DF711A /* SimplePasscodeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 843557CE2347409E00DF711A /* SimplePasscodeView.xib */; };
+		843557D42347409E00DF711A /* PinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843557CF2347409E00DF711A /* PinView.swift */; };
+		843557D52347409E00DF711A /* PasscodeConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843557D02347409E00DF711A /* PasscodeConfiguration.swift */; };
+		843557D62347409E00DF711A /* PinIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843557D12347409E00DF711A /* PinIndicator.swift */; };
+		843557D72347409E00DF711A /* SimplePasscodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843557D22347409E00DF711A /* SimplePasscodeView.swift */; };
 		84B13B0D23431FE900EB83EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B13B0C23431FE900EB83EE /* AppDelegate.swift */; };
 		84B13B0F23431FE900EB83EE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B13B0E23431FE900EB83EE /* SceneDelegate.swift */; };
 		84B13B1123431FE900EB83EE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B13B1023431FE900EB83EE /* ViewController.swift */; };
@@ -16,6 +24,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		54C2E66D44E3C9D31F907C3D /* Pods-ExPay.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExPay.debug.xcconfig"; path = "Target Support Files/Pods-ExPay/Pods-ExPay.debug.xcconfig"; sourceTree = "<group>"; };
+		840768F4234487EF00350440 /* SecurityCodeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecurityCodeVC.swift; sourceTree = "<group>"; };
+		840768F62344881600350440 /* MyAccountVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAccountVC.swift; sourceTree = "<group>"; };
+		843557CE2347409E00DF711A /* SimplePasscodeView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SimplePasscodeView.xib; sourceTree = "<group>"; };
+		843557CF2347409E00DF711A /* PinView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinView.swift; sourceTree = "<group>"; };
+		843557D02347409E00DF711A /* PasscodeConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasscodeConfiguration.swift; sourceTree = "<group>"; };
+		843557D12347409E00DF711A /* PinIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinIndicator.swift; sourceTree = "<group>"; };
+		843557D22347409E00DF711A /* SimplePasscodeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimplePasscodeView.swift; sourceTree = "<group>"; };
 		84B13B0923431FE900EB83EE /* ExPay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExPay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84B13B0C23431FE900EB83EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84B13B0E23431FE900EB83EE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +40,8 @@
 		84B13B1523431FE900EB83EE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		84B13B1823431FE900EB83EE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		84B13B1A23431FE900EB83EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		939FB4D8909E2C863B3A8422 /* Pods_ExPay.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ExPay.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E02EFF409EF861DF5EFFB737 /* Pods-ExPay.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExPay.release.xcconfig"; path = "Target Support Files/Pods-ExPay/Pods-ExPay.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +49,33 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				66C7D3D8C64B71330269B724 /* Pods_ExPay.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		843557CD2347409E00DF711A /* PasscodeView */ = {
+			isa = PBXGroup;
+			children = (
+				843557CE2347409E00DF711A /* SimplePasscodeView.xib */,
+				843557CF2347409E00DF711A /* PinView.swift */,
+				843557D02347409E00DF711A /* PasscodeConfiguration.swift */,
+				843557D12347409E00DF711A /* PinIndicator.swift */,
+				843557D22347409E00DF711A /* SimplePasscodeView.swift */,
+			);
+			name = PasscodeView;
+			path = "../../../../Downloads/PasscodeLock-master/SimplePasscodeView/PasscodeView";
+			sourceTree = "<group>";
+		};
 		84B13B0023431FE900EB83EE = {
 			isa = PBXGroup;
 			children = (
 				84B13B0B23431FE900EB83EE /* ExPay */,
 				84B13B0A23431FE900EB83EE /* Products */,
+				DE03BFDA641573D3EAC8E7B2 /* Pods */,
+				BBD29E68026BE65DDEFA532D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -59,12 +93,32 @@
 				84B13B0C23431FE900EB83EE /* AppDelegate.swift */,
 				84B13B0E23431FE900EB83EE /* SceneDelegate.swift */,
 				84B13B1023431FE900EB83EE /* ViewController.swift */,
+				840768F4234487EF00350440 /* SecurityCodeVC.swift */,
+				840768F62344881600350440 /* MyAccountVC.swift */,
 				84B13B1223431FE900EB83EE /* Main.storyboard */,
 				84B13B1523431FE900EB83EE /* Assets.xcassets */,
 				84B13B1723431FE900EB83EE /* LaunchScreen.storyboard */,
 				84B13B1A23431FE900EB83EE /* Info.plist */,
+				843557CD2347409E00DF711A /* PasscodeView */,
 			);
 			path = ExPay;
+			sourceTree = "<group>";
+		};
+		BBD29E68026BE65DDEFA532D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				939FB4D8909E2C863B3A8422 /* Pods_ExPay.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DE03BFDA641573D3EAC8E7B2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				54C2E66D44E3C9D31F907C3D /* Pods-ExPay.debug.xcconfig */,
+				E02EFF409EF861DF5EFFB737 /* Pods-ExPay.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +128,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 84B13B1D23431FE900EB83EE /* Build configuration list for PBXNativeTarget "ExPay" */;
 			buildPhases = (
+				02941559D03001C3F3F3DCE1 /* [CP] Check Pods Manifest.lock */,
 				84B13B0523431FE900EB83EE /* Sources */,
 				84B13B0623431FE900EB83EE /* Frameworks */,
 				84B13B0723431FE900EB83EE /* Resources */,
+				82A9C28C2712065E9EF0D816 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -127,20 +183,69 @@
 			files = (
 				84B13B1923431FE900EB83EE /* LaunchScreen.storyboard in Resources */,
 				84B13B1623431FE900EB83EE /* Assets.xcassets in Resources */,
+				843557D32347409E00DF711A /* SimplePasscodeView.xib in Resources */,
 				84B13B1423431FE900EB83EE /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		02941559D03001C3F3F3DCE1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ExPay-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		82A9C28C2712065E9EF0D816 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ExPay/Pods-ExPay-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ExPay/Pods-ExPay-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ExPay/Pods-ExPay-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		84B13B0523431FE900EB83EE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				843557D72347409E00DF711A /* SimplePasscodeView.swift in Sources */,
 				84B13B1123431FE900EB83EE /* ViewController.swift in Sources */,
+				843557D62347409E00DF711A /* PinIndicator.swift in Sources */,
 				84B13B0D23431FE900EB83EE /* AppDelegate.swift in Sources */,
+				843557D52347409E00DF711A /* PasscodeConfiguration.swift in Sources */,
+				843557D42347409E00DF711A /* PinView.swift in Sources */,
 				84B13B0F23431FE900EB83EE /* SceneDelegate.swift in Sources */,
+				840768F5234487EF00350440 /* SecurityCodeVC.swift in Sources */,
+				840768F72344881600350440 /* MyAccountVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,6 +387,7 @@
 		};
 		84B13B1E23431FE900EB83EE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 54C2E66D44E3C9D31F907C3D /* Pods-ExPay.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -299,6 +405,7 @@
 		};
 		84B13B1F23431FE900EB83EE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E02EFF409EF861DF5EFFB737 /* Pods-ExPay.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
