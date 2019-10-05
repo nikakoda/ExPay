@@ -10,6 +10,15 @@ import UIKit
 
 class MyAccountVC: UIViewController {
 
+    /////  или string
+    var money = "2500"
+    
+    lazy var moneyArr = ["\(money) THB", "\(money) DRG", "\(money) BTC", "\(money) ETC", "\(money) ABC"]
+    
+    
+    @IBOutlet weak var collectionView: UICollectionView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -31,26 +40,6 @@ class MyAccountVC: UIViewController {
         
         view.endEditing(false)
     }
-    
-    
-    // по факту активными сделать только врехнюю часть
-    // просто вставить картинки вместо точек
-    
-    
-    // для page controller
-    // https://www.youtube.com/watch?v=AgUubgI-ZjI
-    // вставить картинки вместо точек
-    // http://qaru.site/questions/11550489/add-border-for-dots-in-uipagecontrol
-    //https://stackoverflow.com/questions/12190147/customize-dot-with-image-of-uipagecontrol-at-index-0-of-uipagecontrol
-    // https://stackoverflow.com/questions/51675303/uipagecontrol-and-uiscrollview-not-scrolling
-    
-    // поместить пэйдж контрол в юайимаге вью и пролистывать скроллить только это
-    
-    
-    
-    
-    
-
     /*
     // MARK: - Navigation
 
@@ -61,4 +50,38 @@ class MyAccountVC: UIViewController {
     }
     */
 
+}
+
+
+extension MyAccountVC: UICollectionViewDelegate, UICollectionViewDataSource {
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return moneyArr.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as? DataCollectionViewCell
+        cell?.labelMoney.text = moneyArr[indexPath.row]
+        return cell!
+    }
+}
+
+extension MyAccountVC: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let size = collectionView.frame.size
+        return CGSize(width: size.width, height: size.height)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+    }
+    
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return 0
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 0
+    }
 }
