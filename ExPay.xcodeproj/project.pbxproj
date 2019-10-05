@@ -15,6 +15,7 @@
 		8407551023478324000E1222 /* SimplePasscodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8407550B23478324000E1222 /* SimplePasscodeView.swift */; };
 		840768F5234487EF00350440 /* SecurityCodeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840768F4234487EF00350440 /* SecurityCodeVC.swift */; };
 		840768F72344881600350440 /* MyAccountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840768F62344881600350440 /* MyAccountVC.swift */; };
+		844538192348BD6C00175DF8 /* DataCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844538182348BD6C00175DF8 /* DataCollectionViewCell.swift */; };
 		84B13B0D23431FE900EB83EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B13B0C23431FE900EB83EE /* AppDelegate.swift */; };
 		84B13B0F23431FE900EB83EE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B13B0E23431FE900EB83EE /* SceneDelegate.swift */; };
 		84B13B1123431FE900EB83EE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B13B1023431FE900EB83EE /* ViewController.swift */; };
@@ -32,6 +33,7 @@
 		8407550B23478324000E1222 /* SimplePasscodeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimplePasscodeView.swift; sourceTree = "<group>"; };
 		840768F4234487EF00350440 /* SecurityCodeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecurityCodeVC.swift; sourceTree = "<group>"; };
 		840768F62344881600350440 /* MyAccountVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAccountVC.swift; sourceTree = "<group>"; };
+		844538182348BD6C00175DF8 /* DataCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataCollectionViewCell.swift; sourceTree = "<group>"; };
 		84B13B0923431FE900EB83EE /* ExPay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExPay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84B13B0C23431FE900EB83EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84B13B0E23431FE900EB83EE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -94,6 +96,7 @@
 				84B13B1023431FE900EB83EE /* ViewController.swift */,
 				840768F4234487EF00350440 /* SecurityCodeVC.swift */,
 				840768F62344881600350440 /* MyAccountVC.swift */,
+				844538182348BD6C00175DF8 /* DataCollectionViewCell.swift */,
 				84B13B1223431FE900EB83EE /* Main.storyboard */,
 				8407550623478324000E1222 /* PasscodeView */,
 				84B13B1523431FE900EB83EE /* Assets.xcassets */,
@@ -240,6 +243,7 @@
 				84B13B1123431FE900EB83EE /* ViewController.swift in Sources */,
 				8407550F23478324000E1222 /* PinIndicator.swift in Sources */,
 				84B13B0D23431FE900EB83EE /* AppDelegate.swift in Sources */,
+				844538192348BD6C00175DF8 /* DataCollectionViewCell.swift in Sources */,
 				8407550E23478324000E1222 /* PasscodeConfiguration.swift in Sources */,
 				8407550D23478324000E1222 /* PinView.swift in Sources */,
 				84B13B0F23431FE900EB83EE /* SceneDelegate.swift in Sources */,
