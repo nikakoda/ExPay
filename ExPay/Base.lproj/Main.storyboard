@@ -88,42 +88,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IzA-ty-4HZ">
-                                <rect key="frame" x="0.0" y="114" width="414" height="148"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="06q-4Q-aFe">
-                                        <rect key="frame" x="360" y="49" width="25" height="50"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" image="forwardButton"/>
-                                        <connections>
-                                            <action selector="forwardButtonPressed:" destination="i5C-ab-6S1" eventType="touchUpInside" id="xqI-ws-Gw1"/>
-                                        </connections>
-                                    </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Value" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bdG-I4-5Zs">
-                                        <rect key="frame" x="245" y="34" width="42" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="exF-7c-hhu">
-                                        <rect key="frame" x="19" y="49" width="25" height="50"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" image="backButton"/>
-                                        <connections>
-                                            <action selector="backButtonPressed:" destination="i5C-ab-6S1" eventType="touchUpInside" id="pPA-1M-ghE"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <viewLayoutGuide key="contentLayoutGuide" id="rFy-iK-Wbj"/>
-                                <viewLayoutGuide key="frameLayoutGuide" id="uh1-qA-Bni"/>
-                            </scrollView>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6ZI-xn-uyj" customClass="ScrollPager" customModule="ExPay" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="44" width="414" height="62"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <connections>
                                     <outlet property="scrollView" destination="IzA-ty-4HZ" id="yoC-OZ-QeR"/>
                                 </connections>
@@ -207,14 +174,46 @@
                                 <color key="pageIndicatorTintColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="currentPageIndicatorTintColor" systemColor="systemBrownColor" red="0.63529411759999999" green="0.51764705879999995" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </pageControl>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UF6-u8-NZ5">
+                                <rect key="frame" x="0.0" y="87" width="414" height="148"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="06q-4Q-aFe">
+                                        <rect key="frame" x="381" y="49" width="25" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="forwardButton"/>
+                                        <connections>
+                                            <action selector="forwardButtonPressed:" destination="i5C-ab-6S1" eventType="touchUpInside" id="xqI-ws-Gw1"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="exF-7c-hhu">
+                                        <rect key="frame" x="0.0" y="49" width="25" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="backButton"/>
+                                        <connections>
+                                            <action selector="backButtonPressed:" destination="i5C-ab-6S1" eventType="touchUpInside" id="pPA-1M-ghE"/>
+                                        </connections>
+                                    </button>
+                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IzA-ty-4HZ">
+                                        <rect key="frame" x="33" y="0.0" width="340" height="148"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <viewLayoutGuide key="contentLayoutGuide" id="rFy-iK-Wbj"/>
+                                        <viewLayoutGuide key="frameLayoutGuide" id="uh1-qA-Bni"/>
+                                    </scrollView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Value" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bdG-I4-5Zs">
+                                <rect key="frame" x="168" y="247" width="78" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <constraints>
-                            <constraint firstItem="cyD-S9-4Ct" firstAttribute="trailing" secondItem="IzA-ty-4HZ" secondAttribute="trailing" id="LCP-40-J6r"/>
-                            <constraint firstItem="cyD-S9-4Ct" firstAttribute="bottom" secondItem="IzA-ty-4HZ" secondAttribute="bottom" constant="474" id="fGr-vv-OuL"/>
-                            <constraint firstItem="IzA-ty-4HZ" firstAttribute="top" secondItem="cyD-S9-4Ct" secondAttribute="top" constant="70" id="lQ2-Xf-uO5"/>
-                            <constraint firstItem="IzA-ty-4HZ" firstAttribute="leading" secondItem="cyD-S9-4Ct" secondAttribute="leading" id="wLb-ea-4O2"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="cyD-S9-4Ct"/>
                     </view>
                     <navigationItem key="navigationItem" id="Xwj-Df-AkY"/>

@@ -18,10 +18,7 @@ import UIKit
     private let indicatorView = UIView()
     private var buttons = [UIButton]()
     private var views = [UIView]()
-    
-    /////
-    private var buttons2 = [UIButton]()
-    
+    private var views2 = [UIView]()
     private var animationInProgress = false
     @IBOutlet public weak var delegate: ScrollPagerDelegate!
     
@@ -30,6 +27,7 @@ import UIKit
             scrollView?.delegate = self
             scrollView?.isPagingEnabled = true
             scrollView?.showsHorizontalScrollIndicator = false
+            
         }
     }
     
@@ -51,7 +49,7 @@ import UIKit
     @IBInspectable public var font: UIFont = UIFont.systemFont(ofSize: 13) {
         didSet { redrawComponents() }
     }
-
+    
     @IBInspectable public var selectedFont: UIFont = UIFont.boldSystemFont(ofSize: 13) {
         didSet { redrawComponents() }
     }
@@ -59,7 +57,7 @@ import UIKit
     @IBInspectable public var indicatorColor: UIColor = UIColor.black {
         didSet { indicatorView.backgroundColor = indicatorColor }
     }
-
+    
     @IBInspectable public var indicatorIsAtBottom: Bool = true {
         didSet { redrawComponents() }
     }
@@ -84,21 +82,21 @@ import UIKit
     
     // MARK: - Initializarion -
     
- //   required public init?(coder aDecoder: NSCoder) {
- //       super.init(coder: aDecoder)
- //       initialize()
- //   }
- //
- //   public override init(frame: CGRect) {
- //       super.init(frame: frame)
- //       initialize()
- //   }
+    //   required public init?(coder aDecoder: NSCoder) {
+    //       super.init(coder: aDecoder)
+    //       initialize()
+    //   }
+    //
+    //   public override init(frame: CGRect) {
+    //       super.init(frame: frame)
+    //       initialize()
+    //   }
     
-  //  private func initialize() {
-  //      #if TARGET_INTERFACE_BUILDER
-  //      addSegmentsWithTitles(segmentTitles: ["One", "Two", "Three", "Four"])
-  //      #endif
-  //  }
+    //   private func initialize() {
+    //       #if TARGET_INTERFACE_BUILDER
+    //       addSegmentsWithTitles(segmentTitles: ["THB", "DRG", "BTC", "ETC", "ABC"])
+    //       #endif
+    //   }
     
     // MARK: - UIView Methods -
     
@@ -114,32 +112,34 @@ import UIKit
     
     
     // ОТОБРАЖЕНИЕ сегментов и вью
-  public func addSegmentsWithTitlesAndViews(segments: [(title: String, view: UIView)]) {
-
-      addButtons(titleOrImages: segments.map { $0.title as AnyObject })
-    addViews(segmentViews: segments.map { $0.view }, buttonViews: segments.map { (($0.title as AnyObject) as! UIButton) })
-
-    
-      redrawComponents()
-  }
-//
-//  public func addSegmentsWithImagesAndViews(segments: [(image: UIImage, view: UIView)]) {
-//
-//      addButtons(titleOrImages: segments.map { $0.image })
-//      addViews(segmentViews: segments.map { $0.view })
-//
-//      redrawComponents()
-//  }
-//
-//  public func addSegmentsWithTitles(segmentTitles: [String]) {
-//      addButtons(titleOrImages: segmentTitles as [AnyObject])
-//      redrawComponents()
-//  }
-//
-//  public func addSegmentsWithImages(segmentImages: [UIImage]) {
-//      addButtons(titleOrImages: segmentImages)
-//      redrawComponents()
-//  }
+    public func addSegmentsWithTitlesAndViews(segments: [(title: String, view: UIView, view2: UIView)]) {
+        
+        addButtons(titleOrImages: segments.map { $0.title as AnyObject })
+        addViews(segmentViews: segments.map { $0.view }, segmentViews2: segments.map { $0.view2 })
+        // addViews(segmentViews: segments.map { $0.view2 })
+        
+        
+        
+        redrawComponents()
+    }
+    //
+    //  public func addSegmentsWithImagesAndViews(segments: [(image: UIImage, view: UIView)]) {
+    //
+    //      addButtons(titleOrImages: segments.map { $0.image })
+    //      addViews(segmentViews: segments.map { $0.view })
+    //
+    //      redrawComponents()
+    //  }
+    //
+    //  public func addSegmentsWithTitles(segmentTitles: [String]) {
+    //      addButtons(titleOrImages: segmentTitles as [AnyObject])
+    //      redrawComponents()
+    //  }
+    //
+    //  public func addSegmentsWithImages(segmentImages: [UIImage]) {
+    //      addButtons(titleOrImages: segmentImages)
+    //      redrawComponents()
+    //  }
     
     public func setSelectedIndex(index: Int, animated: Bool) {
         setSelectedIndex(index: index, animated: animated, moveScrollView: true)
@@ -156,67 +156,73 @@ import UIKit
     
     // ДОБАВИТЬ КНОПКИ И ЛЭЙБЛЫ
     /// lдобавила buttonViews
-    private func addViews(segmentViews: [UIView], buttonViews: [UIButton]) {
-       guard let scrollView = scrollView else { fatalError("trying to add views but the scrollView is nil") }
- 
-       for view in scrollView.subviews {
-           view.removeFromSuperview()
-       }
- 
-       for i in 0..<segmentViews.count {
-           
+    //
+    private func addViews(segmentViews: [UIView], segmentViews2: [UIView]) {
+        guard let scrollView = scrollView else { fatalError("trying to add views but the scrollView is nil") }
         
-        
-    //////////////////
-              //   let frame1 = CGRect(x: 20, y: 20, width: 45, height: 45)
-let button = buttonViews[i]
-     //  let button = UIButton(frame: frame1)
-   
-      //   button.imageView?.image = UIImage(named: "home")
-        // button.setTitle("asdfasdf", for: .normal)
-         button.backgroundColor = UIColor.yellow
-       button.setImage(UIImage(named: "home"), for: .normal)
-       scrollView.addSubview(button)
-       buttons2.append(button)
-      //////////////
-       
-    
-        //
-        let view = segmentViews[i]
-        scrollView.addSubview(view)
-          views.append(view)
-        //
+        for view in scrollView.subviews {
+            view.removeFromSuperview()
         }
         
-    
+        for view2 in scrollView.subviews {
+            view2.removeFromSuperview()
+        }
+        
+        for i in 0..<segmentViews.count {
+            
+            
+            
+            
+            //
+            let view = segmentViews[i]
+            // let view2 = segmentViews2[i]
+            scrollView.addSubview(view)
+            //    scrollView.addSubview(view2)
+            views.append(view)
+            //   views2.append(view2)
+            //
+        }
+        
+        
+        for i in 0..<segmentViews2.count {
+            
+            
+            let view2 = segmentViews2[i]
+            scrollView.addSubview(view2)
+            views2.append(view2)
+            
+        }
     }
-
     
     
-   private func addButtons(titleOrImages: [AnyObject]) {
-       for button in buttons {
-           button.removeFromSuperview()
-       }
- 
-       buttons.removeAll()
- 
-       for i in 0..<titleOrImages.count {
-           let button = UIButton(type: .custom)
-           button.tag = i
-           button.addTarget(self, action: #selector(ScrollPager.buttonSelected(sender:)), for: .touchUpInside)
-           buttons.append(button)
- 
-           if let title = titleOrImages[i] as? String {
-               button.setTitle(title, for: .normal)
-           }
-           else if let image = titleOrImages[i] as? UIImage {
-               button.setImage(image, for: .normal)
-           }
- 
-           addSubview(button)
-           addSubview(indicatorView)
-       }
-   }
+    
+    
+    //
+    
+    private func addButtons(titleOrImages: [AnyObject]) {
+        for button in buttons {
+            button.removeFromSuperview()
+        }
+        
+        buttons.removeAll()
+        
+        for i in 0..<titleOrImages.count {
+            let button = UIButton(type: .custom)
+            button.tag = i
+            button.addTarget(self, action: #selector(ScrollPager.buttonSelected(sender:)), for: .touchUpInside)
+            buttons.append(button)
+            
+            if let title = titleOrImages[i] as? String {
+                button.setTitle(title, for: .normal)
+            }
+            else if let image = titleOrImages[i] as? UIImage {
+                button.setImage(image, for: .normal)
+            }
+            
+            addSubview(button)
+            addSubview(indicatorView)
+        }
+    }
     
     
     
@@ -269,15 +275,14 @@ let button = buttonViews[i]
             
             for i in 0..<views.count {
                 views[i].frame = CGRect(x: scrollView.frame.size.width * CGFloat(i), y: 0, width: scrollView.frame.size.width, height: scrollView.frame.size.height)
-                
-                //////
-                buttons2[i].frame = CGRect(x: 20, y: 20, width: 45, height: 45)
-                
-            
-
+                views2[i].frame = CGRect(x: 10 * CGFloat(i), y: 10, width: 10, height: 10)
                 
                 
             }
+            //////
+//            for i in 0..<views2.count {
+//                views2[i].frame = CGRect(x: scrollView.frame.size.width * CGFloat(i), y: 0, width: scrollView.frame.size.width, height: scrollView.frame.size.height)
+   //         }
         }
     }
     
@@ -309,11 +314,11 @@ let button = buttonViews[i]
     }
     
     // MARK: - UIScrollView Delegate -
-
+    
     public func scrollViewDidScroll(_ scrollView: UIScrollView) {
         if !animationInProgress {
             var page = scrollView.contentOffset.x / scrollView.frame.size.width
-
+            
             if page.truncatingRemainder(dividingBy: 1) > 0.5 {
                 page = page + CGFloat(1)
             }
@@ -326,3 +331,16 @@ let button = buttonViews[i]
     }
     
 }
+
+
+//         //   let frame1 = CGRect(x: 20, y: 20, width: 45, height: 45)
+//       let button = buttonViews[i]
+////  let button = UIButton(frame: frame1)
+
+// //   button.imageView?.image = UIImage(named: "home")
+//   // button.setTitle("asdfasdf", for: .normal)
+//    button.backgroundColor = UIColor.yellow
+//  button.setImage(UIImage(named: "home"), for: .normal)
+//  scrollView.addSubview(button)
+//  buttons2.append(button)
+// //////////////

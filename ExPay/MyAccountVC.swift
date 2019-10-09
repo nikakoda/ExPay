@@ -19,14 +19,21 @@ class MyAccountVC: UIViewController, ScrollPagerDelegate {
     
     @IBOutlet weak var valueLabel: UILabel!
     
+    // баланс
+     var moneyTHB = 2500.0
+     lazy var moneyDRG = moneyTHB * 0.36
+     lazy var moneyBTC = moneyTHB * 0.000004
+     lazy var moneyETC = moneyTHB * 0.007
+     lazy var moneyABC = moneyTHB * 0.004
+  
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         
         
-        
-
 
 ////////////// добавить кнопу
         
@@ -36,46 +43,77 @@ class MyAccountVC: UIViewController, ScrollPagerDelegate {
       // // button.setTitle("asdfasdf", for: .normal)
       //  button.backgroundColor = UIColor.yellow
       //  self.scrollPager.addSubview(button)
-
-        
-        
-        
-        
-        
-        
         
         
         // спрятать кнопку "назад"
         self.navigationItem.setHidesBackButton(true, animated:true)
         
+        
+        // label для баланса
         let firstView = UILabel()
         firstView.backgroundColor = UIColor.white
-        firstView.text = "first View"
+        firstView.text = "\(Int(moneyTHB))"
         firstView.textAlignment = .center
         
         let secondView = UILabel()
         secondView.backgroundColor = UIColor.white
-        secondView.text = "second view"
+        secondView.text = "\(Int(moneyDRG))"
         secondView.textAlignment = .center
         
         let thirdView = UILabel()
         thirdView.backgroundColor = UIColor.white
-        thirdView.text = "third view"
+        thirdView.text = "\(Int(moneyBTC))"
         thirdView.textAlignment = .center
         
         let fourthView = UILabel()
         fourthView.backgroundColor = UIColor.white
-        fourthView.text = "fourth view"
+        fourthView.text = "\(Int(moneyETC))"
         fourthView.textAlignment = .center
         
-        scrollPager.delegate = self
-        scrollPager.addSegmentsWithTitlesAndViews(segments: [
-            ("Home", firstView),
-            ("Public Feed", secondView),
-            ("Profile", thirdView),
-            ("One More", fourthView)
-            ])
+        let fifthView = UILabel()
+        fifthView.backgroundColor = UIColor.white
+        fifthView.text = "\(Int(moneyABC))"
+        fifthView.textAlignment = .center
         
+        
+        
+        
+        // label для валют
+        let firstView1 = UILabel()
+        firstView1.backgroundColor = UIColor.white
+        firstView1.text = "THB"
+        firstView1.textAlignment = .right
+        
+        let secondView1 = UILabel()
+        secondView1.backgroundColor = UIColor.white
+        secondView1.text = "DRG"
+        secondView1.textAlignment = .right
+        
+        let thirdView1 = UILabel()
+        thirdView1.backgroundColor = UIColor.white
+        thirdView1.text = "BTC"
+        thirdView1.textAlignment = .right
+        
+        let fourthView1 = UILabel()
+        fourthView1.backgroundColor = UIColor.white
+        fourthView1.text = "ETC"
+        fourthView1.textAlignment = .right
+        
+        let fifthView1 = UILabel()
+        fifthView1.backgroundColor = UIColor.white
+        fifthView1.text = "ABC"
+        fifthView1.textAlignment = .right
+        
+        
+        
+        scrollPager.delegate = self
+       scrollPager.addSegmentsWithTitlesAndViews(segments: [
+           ("THB", firstView, firstView1),
+           ("DRG", secondView, secondView1),
+           ("BTC", thirdView, thirdView1),
+           ("ETC", fourthView, fourthView1),
+           ("ABC", fifthView, fifthView1)
+           ])
     
     }
     
