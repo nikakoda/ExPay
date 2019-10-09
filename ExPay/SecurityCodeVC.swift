@@ -9,6 +9,7 @@
 import UIKit
 
 class SecurityCodeVC: UIViewController {
+    
     var countOfPin = 1
     @IBOutlet weak var passcodeView: SimplePasscodeView!
     
