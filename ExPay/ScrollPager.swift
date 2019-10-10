@@ -14,6 +14,7 @@ import UIKit
 
 @IBDesignable public class ScrollPager: UIView, UIScrollViewDelegate{
     
+    //private
     private var selectedIndex = 0
     private let indicatorView = UIView()
     private var buttons = [UIButton]()
@@ -34,7 +35,10 @@ import UIKit
     
     
     
-    
+    // для работы кнопок
+    func getCurrentIndex() -> Int {
+        return selectedIndex
+    }
     
     
     
@@ -143,10 +147,11 @@ import UIKit
     
     public func setSelectedIndex(index: Int, animated: Bool) {
         setSelectedIndex(index: index, animated: animated, moveScrollView: true)
+
     }
     
     // MARK: - Private -
-    
+    // private
     private func setSelectedIndex(index: Int, animated: Bool, moveScrollView: Bool) {
         selectedIndex = index
         
@@ -170,9 +175,6 @@ import UIKit
         
         for i in 0..<segmentViews.count {
             
-            
-            
-            
             //
             let view = segmentViews[i]
             // let view2 = segmentViews2[i]
@@ -194,10 +196,6 @@ import UIKit
         }
     }
     
-    
-    
-    
-    //
     
     private func addButtons(titleOrImages: [AnyObject]) {
         for button in buttons {
@@ -226,7 +224,7 @@ import UIKit
     
     
     
-    
+    //private
     private func moveToIndex(index: Int, animated: Bool, moveScrollView: Bool) {
         animationInProgress = true
         
@@ -329,6 +327,15 @@ import UIKit
             }
         }
     }
+    
+    
+    
+    
+    
+    
+    
+  
+    
     
 }
 

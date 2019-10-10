@@ -105,6 +105,12 @@ class MyAccountVC: UIViewController, ScrollPagerDelegate {
         fifthView1.textAlignment = .right
         
         
+        // label для пояснения
+        let firstView2 = UILabel()
+        firstView2.backgroundColor = UIColor.white
+        firstView2.text = "Money in yor wallet"
+        firstView2.textAlignment = .right
+        
         
         scrollPager.delegate = self
        scrollPager.addSegmentsWithTitlesAndViews(segments: [
@@ -123,12 +129,36 @@ class MyAccountVC: UIViewController, ScrollPagerDelegate {
         print("scrollPager index changed: \(changedIndex)")
     }
     
-    
+//    let t = ScrollPager()
     
     @IBAction func backButtonPressed(_ sender: UIButton) {
+        
+        forwardButton.isEnabled = true
+        
+        if (scrollPager.getCurrentIndex() == 0){
+            sender.isEnabled = false
+        } else {
+            scrollPager.setSelectedIndex(index: scrollPager.getCurrentIndex()-1, animated: true)
+           // sender.isEnabled = true
+        }
+        
     }
     
     @IBAction func forwardButtonPressed(_ sender: UIButton) {
+        
+        backButton.isEnabled = true
+        
+        if (scrollPager.getCurrentIndex() == 4){
+            sender.isEnabled = false
+        } else {
+            scrollPager.setSelectedIndex(index: scrollPager.getCurrentIndex()+1, animated: true)
+            //sender.isEnabled = true
+        }
+        
+        
+        
+     //  t.setSelectedIndex(index: 2, animated: true, moveScrollView: false)
+     //  t.scrollViewDidScroll(view as! UIScrollView)
       }
    
     
