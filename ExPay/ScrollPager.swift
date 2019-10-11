@@ -20,6 +20,7 @@ import UIKit
     private var buttons = [UIButton]()
     private var views = [UIView]()
     private var views2 = [UIView]()
+    private var views3 = [UIView]()
     private var animationInProgress = false
     @IBOutlet public weak var delegate: ScrollPagerDelegate!
     
@@ -116,10 +117,10 @@ import UIKit
     
     
     // ОТОБРАЖЕНИЕ сегментов и вью
-    public func addSegmentsWithTitlesAndViews(segments: [(title: String, view: UIView, view2: UIView)]) {
+    public func addSegmentsWithTitlesAndViews(segments: [(title: String, view: UIView, view2: UIView, view3: UIView)]) {
         
         addButtons(titleOrImages: segments.map { $0.title as AnyObject })
-        addViews(segmentViews: segments.map { $0.view }, segmentViews2: segments.map { $0.view2 })
+        addViews(segmentViews: segments.map { $0.view }, segmentViews2: segments.map { $0.view2 }, segmentViews3: segments.map { $0.view3 })
         // addViews(segmentViews: segments.map { $0.view2 })
         
         
@@ -162,7 +163,7 @@ import UIKit
     // ДОБАВИТЬ КНОПКИ И ЛЭЙБЛЫ
     /// lдобавила buttonViews
     //
-    private func addViews(segmentViews: [UIView], segmentViews2: [UIView]) {
+    private func addViews(segmentViews: [UIView], segmentViews2: [UIView], segmentViews3: [UIView]) {
         guard let scrollView = scrollView else { fatalError("trying to add views but the scrollView is nil") }
         
         for view in scrollView.subviews {
@@ -171,6 +172,10 @@ import UIKit
         
         for view2 in scrollView.subviews {
             view2.removeFromSuperview()
+        }
+        
+        for view3 in scrollView.subviews {
+            view3.removeFromSuperview()
         }
         
         for i in 0..<segmentViews.count {
@@ -194,6 +199,16 @@ import UIKit
             views2.append(view2)
             
         }
+        
+        
+        for i in 0..<segmentViews3.count {
+                   
+                   
+                   let view3 = segmentViews3[i]
+                   scrollView.addSubview(view3)
+                   views3.append(view3)
+                   
+               }
     }
     
     
@@ -273,8 +288,8 @@ import UIKit
             
             for i in 0..<views.count {
                 views[i].frame = CGRect(x: scrollView.frame.size.width * CGFloat(i), y: 0, width: scrollView.frame.size.width, height: scrollView.frame.size.height)
-                views2[i].frame = CGRect(x: 10 * CGFloat(i), y: 10, width: 10, height: 10)
-                
+                views2[i].frame = CGRect(x: scrollView.frame.size.width * CGFloat(i), y: 40, width: 230, height: 15)
+                views3[i].frame = CGRect(x: scrollView.frame.size.width * CGFloat(i), y: 90, width: 350, height: 20)
                 
             }
             //////

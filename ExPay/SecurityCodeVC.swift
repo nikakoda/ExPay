@@ -18,15 +18,30 @@ class SecurityCodeVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let color1 = #colorLiteral(red: 0.06666666667, green: 0.2274509804, blue: 0.3725490196, alpha: 1).cgColor
-        let color2 = #colorLiteral(red: 0.02352941176, green: 0.1019607843, blue: 0.1725490196, alpha: 1).cgColor
-        
-        let gradientLayer = CAGradientLayer()
-        gradientLayer.frame = self.view.bounds
-        gradientLayer.colors = [color1, color2]
-        gradientLayer.startPoint = CGPoint(x: 1.0, y: 0.0)
-        gradientLayer.endPoint = CGPoint(x: 0.0, y: 1.0)
+       let color1 = #colorLiteral(red: 0.06666666667, green: 0.2274509804, blue: 0.3725490196, alpha: 1).cgColor
+         let color2 = #colorLiteral(red: 0.02352941176, green: 0.1019607843, blue: 0.1725490196, alpha: 1).cgColor
+         
+         let gradientLayer = CAGradientLayer()
+         gradientLayer.frame = self.view.bounds
+         gradientLayer.colors = [color1, color2]
+        gradientLayer.startPoint = CGPoint(x: 0.0, y: 0.0)
+         gradientLayer.endPoint = CGPoint(x: 0.0, y: 1.0)
         self.view.layer.insertSublayer(gradientLayer, at: 0)
+        
+        
+       
+//        navigationController?.navigationBar.barTintColor = #colorLiteral(red: 0.03529411765, green: 0.1254901961, blue: 0.2078431373, alpha: 1)
+//        navigationController?.navigationBar.isTranslucent = false
+        
+        
+        // внешний вид навигационной панели
+        self.navigationController!.navigationBar.setBackgroundImage(#imageLiteral(resourceName: "Background"), for: .default)
+        self.navigationController!.navigationBar.barTintColor = .white
+        
+        
+        // изменение цвета строки состояния
+        
+        
         
         // появление клавиатуры при загрузке экрана
         view.endEditing(false)
@@ -44,18 +59,29 @@ class SecurityCodeVC: UIViewController {
         passcodeView.pinborderColor = #colorLiteral(red: 0, green: 0.6, blue: 1, alpha: 1).cgColor
         passcodeView.pinfillColor = #colorLiteral(red: 0.02352941176, green: 0.3843137255, blue: 0.6392156863, alpha: 1)
         
+        
+       
+        
+//        let gradientLayer2 = CAGradientLayer()
+//        gradientLayer2.frame = (self.navigationController?.navigationBar.bounds)!
+//        gradientLayer2.colors = [color1, color2]
+//        gradientLayer2.startPoint = CGPoint(x: 0.0, y: 0.0)
+//        gradientLayer2.endPoint = CGPoint(x: 0.0, y: 0.0)
+//        self.navigationController?.navigationBar.layer.insertSublayer(gradientLayer2, at: 0)
+     
+        
+        
+      
+        
+        
     }
     
     
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destination.
-     // Pass the selected object to the new view controller.
-     }
-     */
+
+    
+    
+    
+ 
     
     
     
@@ -114,4 +140,5 @@ extension SecurityCodeVC: SimplePasscodeDelegate {
     // alert.addAction(alertAction)
     // present(alert, animated: true, completion: nil)
 }
+
 

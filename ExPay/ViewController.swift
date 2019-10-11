@@ -13,6 +13,8 @@ class ViewController: UIViewController, MaskedTextFieldDelegateListener {
     
     @IBOutlet weak var phoneNumberPlace: UITextField!
     @IBOutlet weak var applyNumberButton: UIButton!
+    @IBOutlet weak var getHelpButton: UIButton!
+    
     
 
     
@@ -26,7 +28,7 @@ class ViewController: UIViewController, MaskedTextFieldDelegateListener {
         let gradientLayer = CAGradientLayer()
         gradientLayer.frame = self.view.bounds
         gradientLayer.colors = [color1, color2]
-        gradientLayer.startPoint = CGPoint(x: 1.0, y: 0.0)
+       gradientLayer.startPoint = CGPoint(x: 0.0, y: 0.0)
         gradientLayer.endPoint = CGPoint(x: 0.0, y: 1.0)
         self.view.layer.insertSublayer(gradientLayer, at: 0)
         
@@ -34,11 +36,39 @@ class ViewController: UIViewController, MaskedTextFieldDelegateListener {
          phoneNumberPlace.keyboardType = .phonePad
         phoneNumberPlace.keyboardAppearance = .dark
         
+//    gradientLayer.startPoint = CGPoint(x: 0.0, y: 0.0)
+//    gradientLayer.endPoint = CGPoint(x: 0.0, y: 1.0)
         
         textField(phoneNumberPlace, didFillMandatoryCharacters: true, didExtractValue: phoneNumberPlace.text!)
         
         
+        navigationController?.setNavigationBarHidden(true, animated: true)
+        
+        self.phoneNumberPlace.addBottomBorder()
+       
+       // phoneNumberPlace.textColor = #colorLiteral(red: 0.4941176471, green: 0.5450980392, blue: 0.5960784314, alpha: 1)
+        
+        
+        
+        
+        // внешний вид кнопки Apply
+        applyNumberButton.backgroundColor = #colorLiteral(red: 0, green: 0.6, blue: 1, alpha: 1)
+        applyNumberButton.tintColor = .white
+        applyNumberButton.layer.cornerRadius = 25
+        
+        
+        // внешний вид кнопки Get help
+              // applyNumberButton.backgroundColor = #colorLiteral(red: 0, green: 0.6, blue: 1, alpha: 1)
+               getHelpButton.tintColor = .white
+            //   applyNumberButton.layer.cornerRadius = 25
     }
+    
+    
+    
+    
+    
+    
+    
     
     
     //подключение формата для номера телефона
@@ -99,6 +129,11 @@ class ViewController: UIViewController, MaskedTextFieldDelegateListener {
         }
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        navigationController?.setNavigationBarHidden(false, animated: true)
+    }
+    
     
     
     
@@ -106,3 +141,14 @@ class ViewController: UIViewController, MaskedTextFieldDelegateListener {
 
 
 
+
+// нижняя белая полоса для поля ввода номера телефона
+extension UITextField {
+    func addBottomBorder(){
+        let bottomLine = CALayer()
+        bottomLine.frame = CGRect.init(x: 0, y: self.frame.size.height + 4, width: self.frame.size.width, height: 1.5)
+        bottomLine.backgroundColor = UIColor.white.cgColor
+        self.borderStyle = UITextField.BorderStyle.none
+        self.layer.addSublayer(bottomLine)
+    }
+}

@@ -32,18 +32,32 @@ class MyAccountVC: UIViewController, ScrollPagerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+       
         
+        // фон
+        let color2 = #colorLiteral(red: 0.1725490196, green: 0.231372549, blue: 0.2823529412, alpha: 1).cgColor
+        let color1 = #colorLiteral(red: 0.03137254902, green: 0.03529411765, blue: 0.03921568627, alpha: 1).cgColor
+
+        let gradientLayer = CAGradientLayer()
+        gradientLayer.frame = self.view.bounds
+        gradientLayer.colors = [color1, color2]
+        gradientLayer.startPoint = CGPoint(x: 0.4, y: 0.4)
+        gradientLayer.endPoint = CGPoint(x: 0.7, y: 0.0)
+        self.view.layer.insertSublayer(gradientLayer, at: 0)
+        
+        
+//        gradientLayer.startPoint = CGPoint(x: 1.0, y: 0.5)
+//        gradientLayer.endPoint = CGPoint(x: 0.5, y: 1.0)
+        
+        //addSublayer
         
 
-////////////// добавить кнопу
-        
-      //          let frame1 = CGRect(x: 20, y: 20, width: 45, height: 45 )
-      //          let button = UIButton(frame: frame1)
-      //  button.imageView?.image = UIImage(named: "home")
-      // // button.setTitle("asdfasdf", for: .normal)
-      //  button.backgroundColor = UIColor.yellow
-      //  self.scrollPager.addSubview(button)
-        
+        // внешний вид навигационной панели
+                       navigationController?.navigationBar.barTintColor = #colorLiteral(red: 0.06274509804, green: 0.08235294118, blue: 0.09803921569, alpha: 1)
+                      navigationController?.navigationBar.isTranslucent = false
+
+    
+
         
         // спрятать кнопку "назад"
         self.navigationItem.setHidesBackButton(true, animated:true)
@@ -109,16 +123,36 @@ class MyAccountVC: UIViewController, ScrollPagerDelegate {
         let firstView2 = UILabel()
         firstView2.backgroundColor = UIColor.white
         firstView2.text = "Money in yor wallet"
-        firstView2.textAlignment = .right
+        firstView2.textAlignment = .center
+        
+        let secondView2 = UILabel()
+        secondView2.backgroundColor = UIColor.white
+        secondView2.text = "Money in yor wallet"
+        secondView2.textAlignment = .center
+        
+        let thirdView2 = UILabel()
+        thirdView2.backgroundColor = UIColor.white
+        thirdView2.text = "Money in yor wallet"
+        thirdView2.textAlignment = .center
+        
+        let fourthView2 = UILabel()
+        fourthView2.backgroundColor = UIColor.white
+        fourthView2.text = "Money in yor wallet"
+        fourthView2.textAlignment = .center
+        
+        let fifthView2 = UILabel()
+        fifthView2.backgroundColor = UIColor.white
+        fifthView2.text = "Money in yor wallet"
+        fifthView2.textAlignment = .center
         
         
         scrollPager.delegate = self
        scrollPager.addSegmentsWithTitlesAndViews(segments: [
-           ("THB", firstView, firstView1),
-           ("DRG", secondView, secondView1),
-           ("BTC", thirdView, thirdView1),
-           ("ETC", fourthView, fourthView1),
-           ("ABC", fifthView, fifthView1)
+           ("THB", firstView, firstView1, firstView2),
+           ("DRG", secondView, secondView1, secondView2),
+           ("BTC", thirdView, thirdView1, thirdView2),
+           ("ETC", fourthView, fourthView1, fourthView2),
+           ("ABC", fifthView, fifthView1, fifthView2)
            ])
     
     }
