@@ -43,18 +43,12 @@
                                     <action selector="applyNumberButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mVF-yo-3qj"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="I agree to terms of service" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8s7-sT-l18">
-                                <rect key="frame" x="107" y="667" width="200" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I agree to" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8s7-sT-l18">
+                                <rect key="frame" x="107" y="689" width="64.666666666666686" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A2U-9k-7wo">
-                                <rect key="frame" x="25" y="665" width="41" height="22"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" image="checkmark.square.fill" catalog="system"/>
-                            </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="EPSlogo" translatesAutoresizingMaskIntoConstraints="NO" id="U5m-XP-MRK">
                                 <rect key="frame" x="65" y="162" width="284" height="96"/>
                                 <constraints>
@@ -69,6 +63,20 @@
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Get help"/>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Fw-wa-bc4">
+                                <rect key="frame" x="83" y="691" width="16" height="16"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="16" id="30h-lD-fNj"/>
+                                    <constraint firstAttribute="width" constant="16" id="Ler-dk-XfK"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="checkBox"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="terms of service" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bcx-ac-ay0">
+                                <rect key="frame" x="176.66666666666666" y="689" width="115.66666666666666" height="18"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -76,11 +84,17 @@
                             <constraint firstItem="Xbr-dO-UdU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="42" id="6z5-af-eXl"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="kDR-7F-xXP" secondAttribute="trailing" constant="160" id="9K4-kb-cNB"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Xbr-dO-UdU" secondAttribute="trailing" constant="42" id="ArU-5e-Dco"/>
+                            <constraint firstItem="8Fw-wa-bc4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="83" id="Axj-gj-APM"/>
+                            <constraint firstItem="bcx-ac-ay0" firstAttribute="leading" secondItem="8s7-sT-l18" secondAttribute="trailing" constant="5" id="EgP-9y-VCV"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="bcx-ac-ay0" secondAttribute="bottom" constant="29" id="Fre-zh-zbz"/>
                             <constraint firstItem="U5m-XP-MRK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="65" id="OQw-dw-JiR"/>
                             <constraint firstItem="7Mh-L5-nx5" firstAttribute="top" secondItem="Xbr-dO-UdU" secondAttribute="bottom" constant="37" id="dAb-1m-Imi"/>
                             <constraint firstItem="Xbr-dO-UdU" firstAttribute="top" secondItem="U5m-XP-MRK" secondAttribute="bottom" constant="79" id="f9v-UH-FeQ"/>
                             <constraint firstItem="kDR-7F-xXP" firstAttribute="top" secondItem="7Mh-L5-nx5" secondAttribute="bottom" constant="15" id="fRN-H5-s1S"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="8Fw-wa-bc4" secondAttribute="bottom" constant="29" id="g0c-gf-KsX"/>
+                            <constraint firstItem="8s7-sT-l18" firstAttribute="leading" secondItem="8Fw-wa-bc4" secondAttribute="trailing" constant="8" id="gTA-n4-Oad"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7Mh-L5-nx5" secondAttribute="trailing" constant="42" id="jdg-Yw-Wmu"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="8s7-sT-l18" secondAttribute="bottom" constant="29" id="piU-qu-0xe"/>
                             <constraint firstItem="U5m-XP-MRK" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="118" id="s2P-UC-PnM"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="U5m-XP-MRK" secondAttribute="trailing" constant="65" id="wAa-2a-BSI"/>
                             <constraint firstItem="7Mh-L5-nx5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="42" id="yAl-aW-FfA"/>
@@ -91,9 +105,12 @@
                         <barButtonItem key="backBarButtonItem" title=" " id="acv-pH-W08"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="IAgreeLabel" destination="8s7-sT-l18" id="fz1-XI-d6A"/>
                         <outlet property="applyNumberButton" destination="7Mh-L5-nx5" id="c9R-JQ-c5I"/>
+                        <outlet property="checkbox" destination="8Fw-wa-bc4" id="8Bz-va-f47"/>
                         <outlet property="getHelpButton" destination="kDR-7F-xXP" id="n9L-gf-9fH"/>
                         <outlet property="phoneNumberPlace" destination="Xbr-dO-UdU" id="8af-Zu-ZQP"/>
+                        <outlet property="termsLabel" destination="bcx-ac-ay0" id="LZx-TQ-RLs"/>
                         <segue destination="hGD-aF-wf5" kind="show" identifier="codeSegue" id="u2u-zs-NKr"/>
                     </connections>
                 </viewController>
@@ -263,27 +280,43 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Create you access code" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cbh-b9-1jc">
-                                <rect key="frame" x="115" y="156" width="184" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create you access code" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cbh-b9-1jc">
+                                <rect key="frame" x="88" y="199" width="236" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LPo-sS-qIz">
-                                <rect key="frame" x="187" y="316" width="40" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P5h-9L-BWf" customClass="SimplePasscodeView" customModule="ExPay" customModuleProvider="target">
+                                <rect key="frame" x="97" y="252" width="221" height="26"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="26" id="SJz-pc-1OB"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LPo-sS-qIz">
+                                <rect key="frame" x="42" y="353" width="330" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="330" id="oB7-Vv-wgf"/>
+                                    <constraint firstAttribute="height" constant="50" id="ygf-y4-xBy"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
                                 <state key="normal" title="Apply"/>
                                 <connections>
                                     <action selector="applyPassCodeButtonPressed:" destination="hGD-aF-wf5" eventType="touchUpInside" id="t6l-3H-ZNd"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="P5h-9L-BWf" customClass="SimplePasscodeView" customModule="ExPay" customModuleProvider="target">
-                                <rect key="frame" x="87" y="196" width="240" height="92"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Cbh-b9-1jc" firstAttribute="leading" secondItem="S7y-MN-71q" secondAttribute="leading" constant="88" id="A3m-6X-HRa"/>
+                            <constraint firstItem="P5h-9L-BWf" firstAttribute="leading" secondItem="S7y-MN-71q" secondAttribute="leading" constant="97" id="Coq-Q5-w2i"/>
+                            <constraint firstItem="LPo-sS-qIz" firstAttribute="top" secondItem="P5h-9L-BWf" secondAttribute="bottom" constant="75" id="DZs-hW-zO2"/>
+                            <constraint firstItem="S7y-MN-71q" firstAttribute="trailing" secondItem="LPo-sS-qIz" secondAttribute="trailing" constant="42" id="LYv-3h-MD8"/>
+                            <constraint firstItem="Cbh-b9-1jc" firstAttribute="top" secondItem="S7y-MN-71q" secondAttribute="top" constant="155" id="jdf-gM-M4y"/>
+                            <constraint firstItem="LPo-sS-qIz" firstAttribute="leading" secondItem="S7y-MN-71q" secondAttribute="leading" constant="42" id="mlM-aM-Tix"/>
+                            <constraint firstItem="S7y-MN-71q" firstAttribute="trailing" secondItem="Cbh-b9-1jc" secondAttribute="trailing" constant="90" id="v1C-4d-IKe"/>
+                            <constraint firstItem="P5h-9L-BWf" firstAttribute="top" secondItem="Cbh-b9-1jc" secondAttribute="bottom" constant="32" id="wDt-Ia-eDO"/>
+                            <constraint firstItem="S7y-MN-71q" firstAttribute="trailing" secondItem="P5h-9L-BWf" secondAttribute="trailing" constant="96" id="wIC-Ih-V5x"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="S7y-MN-71q"/>
                     </view>
                     <navigationItem key="navigationItem" title="Security Code" id="Arc-fE-cTl">
@@ -291,6 +324,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="applyPassCodeButton" destination="LPo-sS-qIz" id="37U-v5-iK1"/>
+                        <outlet property="createLabel" destination="Cbh-b9-1jc" id="z91-Me-cdW"/>
                         <outlet property="passcodeView" destination="P5h-9L-BWf" id="bEn-ER-rTy"/>
                         <segue destination="i5C-ab-6S1" kind="show" identifier="toMyAccountSegue" id="0Wk-HZ-52T"/>
                     </connections>
@@ -321,7 +355,7 @@
     <resources>
         <image name="EPSlogo" width="245" height="96"/>
         <image name="backButton" width="25" height="50"/>
-        <image name="checkmark.square.fill" catalog="system" width="64" height="56"/>
+        <image name="checkBox" width="16" height="16"/>
         <image name="forwardButton" width="25" height="50"/>
     </resources>
 </document>

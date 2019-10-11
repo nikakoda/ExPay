@@ -15,6 +15,9 @@ class SecurityCodeVC: UIViewController {
     
     @IBOutlet weak var applyPassCodeButton: UIButton!
     
+    
+    @IBOutlet weak var createLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -60,6 +63,12 @@ class SecurityCodeVC: UIViewController {
         passcodeView.pinfillColor = #colorLiteral(red: 0.02352941176, green: 0.3843137255, blue: 0.6392156863, alpha: 1)
         
         
+        
+        // внешний вид кнопки Apply
+        applyPassCodeButton.backgroundColor = #colorLiteral(red: 0, green: 0.6, blue: 1, alpha: 1)
+        applyPassCodeButton.tintColor = .white
+        applyPassCodeButton.layer.cornerRadius = 25
+        
        
         
 //        let gradientLayer2 = CAGradientLayer()
@@ -71,7 +80,7 @@ class SecurityCodeVC: UIViewController {
      
         
         
-      
+        createLabel.textColor = .white
         
         
     }

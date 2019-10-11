@@ -15,6 +15,10 @@ class ViewController: UIViewController, MaskedTextFieldDelegateListener {
     @IBOutlet weak var applyNumberButton: UIButton!
     @IBOutlet weak var getHelpButton: UIButton!
     
+    @IBOutlet weak var IAgreeLabel: UILabel!
+    @IBOutlet weak var termsLabel: UILabel!
+    
+    @IBOutlet weak var checkbox: UIButton!
     
 
     
@@ -61,6 +65,10 @@ class ViewController: UIViewController, MaskedTextFieldDelegateListener {
               // applyNumberButton.backgroundColor = #colorLiteral(red: 0, green: 0.6, blue: 1, alpha: 1)
                getHelpButton.tintColor = .white
             //   applyNumberButton.layer.cornerRadius = 25
+        
+        
+        IAgreeLabel.textColor = .white
+        termsLabel.textColor = .white
     }
     
     
