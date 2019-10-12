@@ -15,27 +15,24 @@ public protocol SimplePasscodeDelegate: class {
 public class SimplePasscodeView: UIView {
     
     @IBOutlet private weak var passcodeStackView: UIStackView!
-    
+
     private var contentView: UIView?
     //private
     public var passcodeText = String()
     
-    
-    
-    
     public weak var delegate: SimplePasscodeDelegate?
     public var keyboardType: UIKeyboardType = .numberPad
     public var keyboardAppearance: UIKeyboardAppearance = .dark
-
-  // required public init?(coder aDecoder: NSCoder) {
-  //     super.init(coder: aDecoder)
-  // }
-  
-   public override func layoutSubviews() {
-       super.layoutSubviews()
-       setup()
-   }
-
+    
+    // required public init?(coder aDecoder: NSCoder) {
+    //     super.init(coder: aDecoder)
+    // }
+    
+    public override func layoutSubviews() {
+        super.layoutSubviews()
+        setup()
+    }
+    
     private func setup() {
         if (contentView == nil) {
             contentView = loadViewFromNib()

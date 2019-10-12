@@ -19,32 +19,29 @@ class PinView: UIView, PinViewConfigurable {
     
     private lazy var indicator = PinIndicator()
     private lazy var pinLabel  = UILabel()
-    // private
     private lazy var isFilled: Bool = false
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setup()
     }
     
-   private func setup() {
-       translatesAutoresizingMaskIntoConstraints = false
-       widthAnchor.constraint(equalToConstant: PinViewDefaults.pinViewWidth).isActive = true
-       heightAnchor.constraint(equalToConstant: PinViewDefaults.pinViewHeight).isActive = true
- 
-       addSubview(indicator)
-       indicator.translatesAutoresizingMaskIntoConstraints = false
-       indicator.widthAnchor.constraint(equalToConstant: PinViewDefaults.pinIndicatorWidth).isActive = true
-       indicator.heightAnchor.constraint(equalToConstant: PinViewDefaults.pinIndicatorHeight).isActive = true
-       indicator.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
-       indicator.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
-   }
-    
-    // internal
+    private func setup() {
+        translatesAutoresizingMaskIntoConstraints = false
+        widthAnchor.constraint(equalToConstant: PinViewDefaults.pinViewWidth).isActive = true
+        heightAnchor.constraint(equalToConstant: PinViewDefaults.pinViewHeight).isActive = true
+        
+        addSubview(indicator)
+        indicator.translatesAutoresizingMaskIntoConstraints = false
+        indicator.widthAnchor.constraint(equalToConstant: PinViewDefaults.pinIndicatorWidth).isActive = true
+        indicator.heightAnchor.constraint(equalToConstant: PinViewDefaults.pinIndicatorHeight).isActive = true
+        indicator.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
+        indicator.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
+    }
+
     internal func isEmpty() -> Bool {
         return !isFilled
     }
@@ -57,7 +54,6 @@ class PinView: UIView, PinViewConfigurable {
             } else {
                 indicator.clearView()
             }
-            
             indicator.isHidden = false
             pinLabel.isHidden  = true
         } else {

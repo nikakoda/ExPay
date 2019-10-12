@@ -13,8 +13,6 @@ private var fontColor            = UIColor.black
 private var borderColor          = #colorLiteral(red: 0, green: 0.6, blue: 1, alpha: 1).cgColor
 private var fillColor            = #colorLiteral(red: 0.02352941176, green: 0.3843137255, blue: 0.6392156863, alpha: 1)
 
-
-
 public protocol PinViewConfigurable {
     var pinfont: UIFont {get set}
     var pinfontColor: UIColor {get set}

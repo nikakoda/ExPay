@@ -245,14 +245,14 @@
                                 </constraints>
                             </view>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="RectLeft" translatesAutoresizingMaskIntoConstraints="NO" id="hGq-GB-ilh">
-                                <rect key="frame" x="169" y="679" width="31" height="6"/>
+                                <rect key="frame" x="169" y="679" width="32" height="6"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="6" id="hPc-H6-Rzx"/>
                                     <constraint firstAttribute="width" constant="32" id="q6D-cX-ay3"/>
                                 </constraints>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="RectRight" translatesAutoresizingMaskIntoConstraints="NO" id="WO3-aG-gzy">
-                                <rect key="frame" x="214" y="679" width="32" height="6"/>
+                                <rect key="frame" x="215" y="679" width="31" height="6"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="6" id="PrC-Yg-7QM"/>
                                     <constraint firstAttribute="width" constant="32" id="sAb-xe-7h1"/>

@@ -14,13 +14,9 @@ class ViewController: UIViewController, MaskedTextFieldDelegateListener {
     @IBOutlet weak var phoneNumberPlace: UITextField!
     @IBOutlet weak var applyNumberButton: UIButton!
     @IBOutlet weak var getHelpButton: UIButton!
-    
     @IBOutlet weak var IAgreeLabel: UILabel!
     @IBOutlet weak var termsLabel: UILabel!
-    
     @IBOutlet weak var checkbox: UIButton!
-    
-
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,52 +28,37 @@ class ViewController: UIViewController, MaskedTextFieldDelegateListener {
         let gradientLayer = CAGradientLayer()
         gradientLayer.frame = self.view.bounds
         gradientLayer.colors = [color1, color2]
-       gradientLayer.startPoint = CGPoint(x: 0.0, y: 0.0)
+        gradientLayer.startPoint = CGPoint(x: 0.0, y: 0.0)
         gradientLayer.endPoint = CGPoint(x: 0.0, y: 1.0)
         self.view.layer.insertSublayer(gradientLayer, at: 0)
         
         // внешний вид клавиатуры
-         phoneNumberPlace.keyboardType = .phonePad
+        phoneNumberPlace.keyboardType = .phonePad
         phoneNumberPlace.keyboardAppearance = .dark
         
-//    gradientLayer.startPoint = CGPoint(x: 0.0, y: 0.0)
-//    gradientLayer.endPoint = CGPoint(x: 0.0, y: 1.0)
+        //    gradientLayer.startPoint = CGPoint(x: 0.0, y: 0.0)
+        //    gradientLayer.endPoint = CGPoint(x: 0.0, y: 1.0)
         
         textField(phoneNumberPlace, didFillMandatoryCharacters: true, didExtractValue: phoneNumberPlace.text!)
-        
-        
         navigationController?.setNavigationBarHidden(true, animated: true)
         
         self.phoneNumberPlace.addBottomBorder()
-       
-       // phoneNumberPlace.textColor = #colorLiteral(red: 0.4941176471, green: 0.5450980392, blue: 0.5960784314, alpha: 1)
         
-        
-        
-        
+        // phoneNumberPlace.textColor = #colorLiteral(red: 0.4941176471, green: 0.5450980392, blue: 0.5960784314, alpha: 1)
+    
         // внешний вид кнопки Apply
         applyNumberButton.backgroundColor = #colorLiteral(red: 0, green: 0.6, blue: 1, alpha: 1)
         applyNumberButton.tintColor = .white
         applyNumberButton.layer.cornerRadius = 25
         
-        
         // внешний вид кнопки Get help
-              // applyNumberButton.backgroundColor = #colorLiteral(red: 0, green: 0.6, blue: 1, alpha: 1)
-               getHelpButton.tintColor = .white
-            //   applyNumberButton.layer.cornerRadius = 25
-        
+        // applyNumberButton.backgroundColor = #colorLiteral(red: 0, green: 0.6, blue: 1, alpha: 1)
+        getHelpButton.tintColor = .white
+        //   applyNumberButton.layer.cornerRadius = 25
         
         IAgreeLabel.textColor = .white
         termsLabel.textColor = .white
     }
-    
-    
-    
-    
-    
-    
-    
-    
     
     //подключение формата для номера телефона
     open func textField(
@@ -88,46 +69,19 @@ class ViewController: UIViewController, MaskedTextFieldDelegateListener {
         print(value)
     }
     
-    
-    
-    
-    
-    
-    //  override func viewDidAppear(_ animated: Bool) {
-    //      super.viewDidAppear(animated)
-    //
-    //
-    //      print(phoneNumberPlace.text)
-    //             print(validate(value: phoneNumberPlace.text!))
-    //
-    //  }
-    
-    
-    
-    
-    
     // первичная валидация номера телефона
     func validate(value: String) -> Bool {
-        
         let PHONE_REGEX = "^((8|\\+7)[\\- ]?)?(\\(?\\d{3}\\)?[\\- ]?)?[\\d\\- ]{7,10}$"
         let phoneTest = NSPredicate(format: "SELF MATCHES %@", PHONE_REGEX)
         let result =  phoneTest.evaluate(with: value)
         return result
     }
     
-    
-    
-    
     // переход на 3 экран - SecurityCodeVC
     @IBAction func applyNumberButtonPressed(_ sender: UIButton) {
-
+        
         guard phoneNumberPlace.text?.isEmpty == false else {return}
-        
-      //  print(phoneNumberPlace.text)
-      //  print(validate(value: phoneNumberPlace.text!))
-        
         if (validate(value: phoneNumberPlace.text!) == true) {
-
             performSegue(withIdentifier: "codeSegue", sender: nil)
         } else {
             let alert = UIAlertController(title: "Wrong format", message: "Please enter your phone number", preferredStyle: .alert)
@@ -141,14 +95,7 @@ class ViewController: UIViewController, MaskedTextFieldDelegateListener {
         super.viewWillDisappear(animated)
         navigationController?.setNavigationBarHidden(false, animated: true)
     }
-    
-    
-    
-    
 }
-
-
-
 
 // нижняя белая полоса для поля ввода номера телефона
 extension UITextField {

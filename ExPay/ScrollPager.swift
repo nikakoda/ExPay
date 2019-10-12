@@ -14,7 +14,6 @@ import UIKit
 
 @IBDesignable public class ScrollPager: UIView, UIScrollViewDelegate{
     
-    //private
     private var selectedIndex = 0
     private let indicatorView = UIView()
     private var buttons = [UIButton]()
@@ -32,15 +31,11 @@ import UIKit
             scrollView?.backgroundColor = UIColor(patternImage: UIImage(named: "MaskGroup4")!)
         }
     }
-    
-    
-    
-    
+
     // для работы кнопок
     func getCurrentIndex() -> Int {
         return selectedIndex
     }
-    
     
     // настройки отображения вкладок
     @IBInspectable public var textColor: UIColor = UIColor.lightGray {
@@ -85,130 +80,57 @@ import UIKit
     
     @IBInspectable public var animationDuration: CGFloat = 0.2
     
-    // MARK: - Initializarion -
-    
-    //   required public init?(coder aDecoder: NSCoder) {
-    //       super.init(coder: aDecoder)
-    //       initialize()
-    //   }
-    //
-    //   public override init(frame: CGRect) {
-    //       super.init(frame: frame)
-    //       initialize()
-    //   }
-    
-    //   private func initialize() {
-    //       #if TARGET_INTERFACE_BUILDER
-    //       addSegmentsWithTitles(segmentTitles: ["THB", "DRG", "BTC", "ETC", "ABC"])
-    //       #endif
-    //   }
-    
-    // MARK: - UIView Methods -
-    
     public override func layoutSubviews() {
         super.layoutSubviews()
-        
         redrawComponents()
-        //moveToIndex(selectedIndex, animated: false, moveScrollView: true)
     }
-    
-    // MARK: - Public Methods -
-    
-    
-    
-    // ОТОБРАЖЕНИЕ сегментов и вью
+
+    // отображение сегментов и вью
     public func addSegmentsWithTitlesAndViews(segments: [(title: String, view: UIView, view2: UIView, view3: UIView)]) {
         
         addButtons(titleOrImages: segments.map { $0.title as AnyObject })
         addViews(segmentViews: segments.map { $0.view }, segmentViews2: segments.map { $0.view2 }, segmentViews3: segments.map { $0.view3 })
-        // addViews(segmentViews: segments.map { $0.view2 })
-        
-        
-        
         redrawComponents()
     }
-    //
-    //  public func addSegmentsWithImagesAndViews(segments: [(image: UIImage, view: UIView)]) {
-    //
-    //      addButtons(titleOrImages: segments.map { $0.image })
-    //      addViews(segmentViews: segments.map { $0.view })
-    //
-    //      redrawComponents()
-    //  }
-    //
-    //  public func addSegmentsWithTitles(segmentTitles: [String]) {
-    //      addButtons(titleOrImages: segmentTitles as [AnyObject])
-    //      redrawComponents()
-    //  }
-    //
-    //  public func addSegmentsWithImages(segmentImages: [UIImage]) {
-    //      addButtons(titleOrImages: segmentImages)
-    //      redrawComponents()
-    //  }
     
     public func setSelectedIndex(index: Int, animated: Bool) {
         setSelectedIndex(index: index, animated: animated, moveScrollView: true)
-
+        
     }
-    
-    // MARK: - Private -
-    // private
+
     private func setSelectedIndex(index: Int, animated: Bool, moveScrollView: Bool) {
         selectedIndex = index
         
         moveToIndex(index: index, animated: animated, moveScrollView: moveScrollView)
     }
     
-    
-    // ДОБАВИТЬ КНОПКИ И ЛЭЙБЛЫ
-    /// lдобавила buttonViews
-    //
     private func addViews(segmentViews: [UIView], segmentViews2: [UIView], segmentViews3: [UIView]) {
         guard let scrollView = scrollView else { fatalError("trying to add views but the scrollView is nil") }
         
         for view in scrollView.subviews {
             view.removeFromSuperview()
         }
-        
         for view2 in scrollView.subviews {
             view2.removeFromSuperview()
         }
-        
         for view3 in scrollView.subviews {
             view3.removeFromSuperview()
         }
-        
         for i in 0..<segmentViews.count {
-            
-            //
             let view = segmentViews[i]
-            // let view2 = segmentViews2[i]
             scrollView.addSubview(view)
-            //    scrollView.addSubview(view2)
             views.append(view)
-            //   views2.append(view2)
-            //
         }
-        
-        
         for i in 0..<segmentViews2.count {
-            
-            
             let view2 = segmentViews2[i]
             scrollView.addSubview(view2)
             views2.append(view2)
-            
         }
-        
-        
         for i in 0..<segmentViews3.count {
-                   
-                   
-                   let view3 = segmentViews3[i]
-                   scrollView.addSubview(view3)
-                   views3.append(view3)
-                   
-               }
+            let view3 = segmentViews3[i]
+            scrollView.addSubview(view3)
+            views3.append(view3)
+        }
     }
     
     // добавление вкладок в массив
@@ -216,7 +138,6 @@ import UIKit
         for button in buttons {
             button.removeFromSuperview()
         }
-        
         buttons.removeAll()
         
         for i in 0..<titleOrImages.count {
@@ -231,15 +152,11 @@ import UIKit
             else if let image = titleOrImages[i] as? UIImage {
                 button.setImage(image, for: .normal)
             }
-            
             addSubview(button)
             addSubview(indicatorView)
         }
     }
-    
-    
-    
-    //private
+
     private func moveToIndex(index: Int, animated: Bool, moveScrollView: Bool) {
         animationInProgress = true
         
@@ -271,7 +188,6 @@ import UIKit
             }
             
             }, completion: { [weak self] finished in
-                // Storyboard crashes on here for some odd reasons, do a nil check
                 self?.animationInProgress = false
         })
     }
@@ -282,7 +198,6 @@ import UIKit
         if buttons.count > 0 {
             moveToIndex(index: selectedIndex, animated: false, moveScrollView: false)
         }
-        
         if let scrollView = scrollView {
             scrollView.contentSize = CGSize(width: scrollView.frame.size.width * CGFloat(buttons.count), height: scrollView.frame.size.height)
             
@@ -290,12 +205,7 @@ import UIKit
                 views[i].frame = CGRect(x: scrollView.frame.size.width * CGFloat(i), y: -10, width: scrollView.frame.size.width, height: scrollView.frame.size.height)
                 views2[i].frame = CGRect(x: scrollView.frame.size.width * CGFloat(i) + 15, y: 55, width: 230, height: 15)
                 views3[i].frame = CGRect(x: scrollView.frame.size.width * CGFloat(i), y: 95, width: 350, height: 20)
-                
             }
-            //////
-//            for i in 0..<views2.count {
-//                views2[i].frame = CGRect(x: scrollView.frame.size.width * CGFloat(i), y: 0, width: scrollView.frame.size.width, height: scrollView.frame.size.height)
-   //         }
         }
     }
     
@@ -303,7 +213,6 @@ import UIKit
         if buttons.count == 0 {
             return
         }
-        
         let width = frame.size.width / CGFloat(buttons.count)
         let height = frame.size.height - indicatorHeight
         let y: CGFloat = indicatorIsAtBottom ? 0 : indicatorHeight
@@ -320,14 +229,10 @@ import UIKit
         if sender.tag == selectedIndex {
             return
         }
-        
         delegate?.scrollPager?(scrollPager: self, changedIndex: sender.tag)
-        
         setSelectedIndex(index: sender.tag, animated: true, moveScrollView: true)
     }
-    
-    // MARK: - UIScrollView Delegate -
-    
+
     public func scrollViewDidScroll(_ scrollView: UIScrollView) {
         if !animationInProgress {
             var page = scrollView.contentOffset.x / scrollView.frame.size.width
@@ -335,7 +240,6 @@ import UIKit
             if page.truncatingRemainder(dividingBy: 1) > 0.5 {
                 page = page + CGFloat(1)
             }
-            
             if Int(page) != selectedIndex {
                 setSelectedIndex(index: Int(page), animated: true, moveScrollView: false)
                 delegate?.scrollPager?(scrollPager: self, changedIndex: Int(page))
@@ -349,7 +253,7 @@ import UIKit
     
     
     
-  
+    
     
     
 }
