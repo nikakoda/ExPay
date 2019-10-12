@@ -19,6 +19,9 @@ class MyAccountVC: UIViewController, ScrollPagerDelegate {
     
     @IBOutlet weak var valueLabel: UILabel!
     
+    @IBOutlet weak var viewWithButtons: UIView!
+    
+    
     // баланс
      var moneyTHB = 2500.0
      lazy var moneyDRG = moneyTHB * 0.36
@@ -32,7 +35,7 @@ class MyAccountVC: UIViewController, ScrollPagerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-       
+        
         
         // фон
         let color2 = #colorLiteral(red: 0.1725490196, green: 0.231372549, blue: 0.2823529412, alpha: 1).cgColor
@@ -46,6 +49,10 @@ class MyAccountVC: UIViewController, ScrollPagerDelegate {
         self.view.layer.insertSublayer(gradientLayer, at: 0)
         
         
+        // фон для поля с кнопками
+        viewWithButtons.backgroundColor = UIColor(patternImage: UIImage(named: "MaskGroup")!)
+        
+        
 //        gradientLayer.startPoint = CGPoint(x: 1.0, y: 0.5)
 //        gradientLayer.endPoint = CGPoint(x: 0.5, y: 1.0)
         
@@ -56,7 +63,7 @@ class MyAccountVC: UIViewController, ScrollPagerDelegate {
                        navigationController?.navigationBar.barTintColor = #colorLiteral(red: 0.06274509804, green: 0.08235294118, blue: 0.09803921569, alpha: 1)
                       navigationController?.navigationBar.isTranslucent = false
 
-    
+       // scrollPager.scrollView?.backgroundColor = #colorLiteral(red: 0, green: 0.6, blue: 1, alpha: 1)
 
         
         // спрятать кнопку "назад"
@@ -65,28 +72,33 @@ class MyAccountVC: UIViewController, ScrollPagerDelegate {
         
         // label для баланса
         let firstView = UILabel()
-        firstView.backgroundColor = UIColor.white
         firstView.text = "\(Int(moneyTHB))"
+        firstView.textColor = .white
+        firstView.font = UIFont.systemFont(ofSize: 40)
         firstView.textAlignment = .center
         
         let secondView = UILabel()
-        secondView.backgroundColor = UIColor.white
         secondView.text = "\(Int(moneyDRG))"
+        secondView.textColor = .white
+        secondView.font = UIFont.systemFont(ofSize: 40)
         secondView.textAlignment = .center
         
         let thirdView = UILabel()
-        thirdView.backgroundColor = UIColor.white
         thirdView.text = "\(Int(moneyBTC))"
+        thirdView.textColor = .white
+        thirdView.font = UIFont.systemFont(ofSize: 40)
         thirdView.textAlignment = .center
         
         let fourthView = UILabel()
-        fourthView.backgroundColor = UIColor.white
         fourthView.text = "\(Int(moneyETC))"
+        fourthView.textColor = .white
+        fourthView.font = UIFont.systemFont(ofSize: 40)
         fourthView.textAlignment = .center
         
         let fifthView = UILabel()
-        fifthView.backgroundColor = UIColor.white
         fifthView.text = "\(Int(moneyABC))"
+        fifthView.textColor = .white
+        fifthView.font = UIFont.systemFont(ofSize: 40)
         fifthView.textAlignment = .center
         
         
@@ -94,55 +106,66 @@ class MyAccountVC: UIViewController, ScrollPagerDelegate {
         
         // label для валют
         let firstView1 = UILabel()
-        firstView1.backgroundColor = UIColor.white
+       // firstView1.backgroundColor = UIColor.white
         firstView1.text = "THB"
+        firstView1.textColor = .white
+        firstView1.font = UIFont.systemFont(ofSize: 14)
         firstView1.textAlignment = .right
         
         let secondView1 = UILabel()
-        secondView1.backgroundColor = UIColor.white
         secondView1.text = "DRG"
+        secondView1.textColor = .white
+        secondView1.font = UIFont.systemFont(ofSize: 14)
         secondView1.textAlignment = .right
         
         let thirdView1 = UILabel()
-        thirdView1.backgroundColor = UIColor.white
         thirdView1.text = "BTC"
+        thirdView1.textColor = .white
+        thirdView1.font = UIFont.systemFont(ofSize: 14)
         thirdView1.textAlignment = .right
         
         let fourthView1 = UILabel()
-        fourthView1.backgroundColor = UIColor.white
         fourthView1.text = "ETC"
+        fourthView1.textColor = .white
+        fourthView1.font = UIFont.systemFont(ofSize: 14)
         fourthView1.textAlignment = .right
         
         let fifthView1 = UILabel()
-        fifthView1.backgroundColor = UIColor.white
         fifthView1.text = "ABC"
+        fifthView1.textColor = .white
+        fifthView1.font = UIFont.systemFont(ofSize: 14)
         fifthView1.textAlignment = .right
         
         
         // label для пояснения
         let firstView2 = UILabel()
-        firstView2.backgroundColor = UIColor.white
-        firstView2.text = "Money in yor wallet"
+        firstView2.text = "Money in your wallet"
+        firstView2.textColor = #colorLiteral(red: 0.6549019608, green: 0.8274509804, blue: 0.9411764706, alpha: 1)
+        firstView2.font = UIFont.systemFont(ofSize: 14)
         firstView2.textAlignment = .center
         
         let secondView2 = UILabel()
-        secondView2.backgroundColor = UIColor.white
-        secondView2.text = "Money in yor wallet"
+        secondView2.text = "Money in your wallet"
+        secondView2.textColor = #colorLiteral(red: 0.6549019608, green: 0.8274509804, blue: 0.9411764706, alpha: 1)
+        secondView2.font = UIFont.systemFont(ofSize: 14)
         secondView2.textAlignment = .center
         
         let thirdView2 = UILabel()
-        thirdView2.backgroundColor = UIColor.white
-        thirdView2.text = "Money in yor wallet"
+        thirdView2.text = "Money in your wallet"
+        thirdView2.textColor = #colorLiteral(red: 0.6549019608, green: 0.8274509804, blue: 0.9411764706, alpha: 1)
+        thirdView2.font = UIFont.systemFont(ofSize: 14)
         thirdView2.textAlignment = .center
         
         let fourthView2 = UILabel()
-        fourthView2.backgroundColor = UIColor.white
-        fourthView2.text = "Money in yor wallet"
+        fourthView2.text = "Money in your wallet"
+        fourthView2.textColor = #colorLiteral(red: 0.6549019608, green: 0.8274509804, blue: 0.9411764706, alpha: 1)
+        fourthView2.font = UIFont.systemFont(ofSize: 14)
         fourthView2.textAlignment = .center
         
         let fifthView2 = UILabel()
-        fifthView2.backgroundColor = UIColor.white
-        fifthView2.text = "Money in yor wallet"
+        fifthView2.text = "Money in your wallet"
+        fifthView2.textColor = #colorLiteral(red: 0.6549019608, green: 0.8274509804, blue: 0.9411764706, alpha: 1)
+        fifthView2.font = UIFont.systemFont(ofSize: 14)
         fifthView2.textAlignment = .center
         
         

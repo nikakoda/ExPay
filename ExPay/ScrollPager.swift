@@ -29,7 +29,7 @@ import UIKit
             scrollView?.delegate = self
             scrollView?.isPagingEnabled = true
             scrollView?.showsHorizontalScrollIndicator = false
-            
+            scrollView?.backgroundColor = UIColor(patternImage: UIImage(named: "MaskGroup4")!)
         }
     }
     
@@ -42,24 +42,24 @@ import UIKit
     }
     
     
-    
+    // настройки отображения вкладок
     @IBInspectable public var textColor: UIColor = UIColor.lightGray {
         didSet { redrawComponents() }
     }
     
-    @IBInspectable public var selectedTextColor: UIColor = UIColor.darkGray {
+    @IBInspectable public var selectedTextColor: UIColor = UIColor.white {
         didSet { redrawComponents() }
     }
     
-    @IBInspectable public var font: UIFont = UIFont.systemFont(ofSize: 13) {
+    @IBInspectable public var font: UIFont = UIFont.systemFont(ofSize: 14) {
         didSet { redrawComponents() }
     }
     
-    @IBInspectable public var selectedFont: UIFont = UIFont.boldSystemFont(ofSize: 13) {
+    @IBInspectable public var selectedFont: UIFont = UIFont.boldSystemFont(ofSize: 14) {
         didSet { redrawComponents() }
     }
     
-    @IBInspectable public var indicatorColor: UIColor = UIColor.black {
+    @IBInspectable public var indicatorColor: UIColor = UIColor.white {
         didSet { indicatorView.backgroundColor = indicatorColor }
     }
     
@@ -211,7 +211,7 @@ import UIKit
                }
     }
     
-    
+    // добавление вкладок в массив
     private func addButtons(titleOrImages: [AnyObject]) {
         for button in buttons {
             button.removeFromSuperview()
@@ -287,9 +287,9 @@ import UIKit
             scrollView.contentSize = CGSize(width: scrollView.frame.size.width * CGFloat(buttons.count), height: scrollView.frame.size.height)
             
             for i in 0..<views.count {
-                views[i].frame = CGRect(x: scrollView.frame.size.width * CGFloat(i), y: 0, width: scrollView.frame.size.width, height: scrollView.frame.size.height)
-                views2[i].frame = CGRect(x: scrollView.frame.size.width * CGFloat(i), y: 40, width: 230, height: 15)
-                views3[i].frame = CGRect(x: scrollView.frame.size.width * CGFloat(i), y: 90, width: 350, height: 20)
+                views[i].frame = CGRect(x: scrollView.frame.size.width * CGFloat(i), y: -10, width: scrollView.frame.size.width, height: scrollView.frame.size.height)
+                views2[i].frame = CGRect(x: scrollView.frame.size.width * CGFloat(i) + 15, y: 55, width: 230, height: 15)
+                views3[i].frame = CGRect(x: scrollView.frame.size.width * CGFloat(i), y: 95, width: 350, height: 20)
                 
             }
             //////
